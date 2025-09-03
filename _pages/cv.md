@@ -11,7 +11,7 @@ redirect_from:
 
 Download
 ======
-* PDF CV: /files/CV_sept_25.pdf
+* [Download PDF CV](/files/CV_sept_25.pdf)
 
 Education
 ======
