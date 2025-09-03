@@ -12,5 +12,4 @@ I am Amitabh Sharma, an MS by Research student in Robotics at the International 
 - Affiliation: Robotics Research Center, IIIT Hyderabad
 - Interests: Aerial manipulation, adaptive/impedance control, RL for control
 
-See my CV for more details:
-- CV: /cv/
+Check out the CV section for more details.
