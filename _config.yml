@@ -9,10 +9,10 @@
 # Basic Site Settings
 locale                   : "en-US"
 site_theme               : "default"
-title                    : "Your Name / Site Title"
+title                    : "Amitabh Sharma"
 title_separator          : "-"
-name                     : &name "Your Name"
-description              : &description "personal description"
+name                     : &name "Amitabh Sharma"
+description              : &description "MS by Research (Robotics) at IIIT Hyderabad. Researching aerial manipulation, non-linear control, and RL-based robotic control."
 url                      : https://ami6643432.github.io # the base hostname & protocol for your site e.g. "https://[your GitHub username].github.io"
 baseurl                  : "" # the subpath of your site, e.g. "/blog"
 repository               : "ami6643432/ami6643432.github.io"
@@ -23,17 +23,17 @@ repository               : "ami6643432/ami6643432.github.io"
 author:
   # Biographic information
   avatar           : "profile.png"
-  name             : "Your Sidebar Name"
+  name             : "Amitabh Sharma"
   pronouns         : # example: "she/her"  
-  bio              : "Short biography for the left-hand sidebar"
-  location         : "Earth"
-  employer         : "Red Brick University"
+  bio              : "MSR student in Robotics at IIIT Hyderabad. Working on aerial manipulation, adaptive and impedance control, and learning-based control."
+  location         : "Hyderabad, India"
+  employer         : "Robotics Research Center, IIIT Hyderabad"
   uri              : # URL
-  email            : "none@example.org" 
+  email            : "amitabh.sharma@research.iiit.ac.in" 
 
   # Academic websites
   arxiv            : # URL - Update with the correct link to your profile
-  googlescholar    : "https://scholar.google.com/citations?user=PS_CX0AAAAAJ"
+  googlescholar    : "https://scholar.google.com/citations?user=3sBW3a0AAAAJ&hl=en"
   impactstory      : # URL
   orcid            : "http://orcid.org/yourorcidurl"
   semantic         : # URL
@@ -45,12 +45,12 @@ author:
   bitbucket        : # Username - Update with your username on the site
   codepen          : # Username
   dribbble         : # Username
-  github           : "academicpages"
+  github           : "ami6643432"
   kaggle           : # Username  
   stackoverflow    : # User number or user number and name (i.e., use "1" or "1/jeff-atwood")    
 
   # Social media
-  bluesky          : "bsky.app" # Replace this with you Bluesky username
+  bluesky          :  # Replace this with your Bluesky username
   facebook         : # Username
   flickr           : # Username
   foursquare       : # Username
@@ -59,7 +59,7 @@ author:
   keybase          : # Username
   instagram        : # Username
   lastfm           : # Username
-  linkedin         : # Username
+  linkedin         : "amitabh-sharma-976141126"
   mastodon         : # URL
   medium           : # URL
   pinterest        : # Username
