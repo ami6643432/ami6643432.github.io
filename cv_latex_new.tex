@@ -1,0 +1,312 @@
+%-------------------------
+% Resume in Latex
+% Author : Amitabh Sharma
+% Based off of: https://github.com/sb2nov/resume
+% License : MIT
+%------------------------
+
+\documentclass[letterpaper,11pt]{article}
+
+\usepackage{latexsym}
+\usepackage[empty]{fullpage}
+\usepackage{titlesec}
+\usepackage{marvosym}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{verbatim}
+\usepackage{enumitem}
+% \usepackage[hidelinks]{hyperref}
+\usepackage{fancyhdr}
+\usepackage[english]{babel}
+\usepackage{tabularx}
+\usepackage{fontawesome5}
+\usepackage{multicol}
+\setlength{\multicolsep}{-3.0pt}
+\setlength{\columnsep}{-1pt}
+\input{glyphtounicode}
+
+\usepackage{xcolor}
+\usepackage[colorlinks = true,
+            linkcolor = blue,
+            urlcolor  = blue,
+            citecolor = blue,
+            anchorcolor = blue]{hyperref}
+
+%----------FONT OPTIONS----------
+% sans-serif
+% \usepackage[sfdefault]{FiraSans}
+% \usepackage[sfdefault]{roboto}
+% \usepackage[sfdefault]{noto-sans}
+% \usepackage[default]{sourcesanspro}
+
+% serif
+% \usepackage{CormorantGaramond}
+% \usepackage{charter}
+
+\pagestyle{fancy}
+\fancyhf{} % clear all header and footer fields
+\fancyfoot{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+
+% Adjust margins
+\addtolength{\oddsidemargin}{-0.6in}
+\addtolength{\evensidemargin}{-0.5in}
+\addtolength{\textwidth}{1.19in}
+\addtolength{\topmargin}{-.7in}
+\addtolength{\textheight}{1.4in}
+
+\urlstyle{same}
+
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0in}
+
+% Sections formatting
+\titleformat{\section}{
+  \vspace{-4pt}\scshape\raggedright\large\bfseries
+}{}{0em}{}[\color{black}\titlerule \vspace{-5pt}]
+
+% Ensure that generate pdf is machine readable/ATS parsable
+\pdfgentounicode=1
+
+%-------------------------
+% Custom commands
+\newcommand{\resumeItem}[1]{
+  \item\small{
+    {#1 \vspace{-2pt}}
+  }
+}
+
+\newcommand{\resumeSubheading}[4]{
+  \vspace{-2pt}\item
+    \begin{tabular*}{1.0\textwidth}[t]{l@{\extracolsep{\fill}}r}
+      \textbf{#1} & \textbf{\small #2} \\
+      \textit{\small #3} & \textit{\small #4} \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeProjectHeading}[2]{
+    \item
+    \begin{tabular*}{1.001\textwidth}{l@{\extracolsep{\fill}}r}
+      \small #1 & \textbf{\small #2}\\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=0.0in, label={}]}
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
+\newcommand{\resumeItemListStart}{\begin{itemize}}
+\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-5pt}}
+
+\renewcommand\labelitemi{$\vcenter{\hbox{\tiny$\bullet$}}$}
+\renewcommand\labelitemii{$\vcenter{\hbox{\tiny$\bullet$}}$}
+
+%%%%%%  RESUME STARTS HERE  %%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{document}
+%----------HEADING----------
+\begin{center}
+    {\Huge \scshape Amitabh Sharma} \\ \vspace{1pt}
+    International Institute of Information Technology, Hyderabad \\ \vspace{1pt}
+    \footnotesize {\raisebox{-0.2\height}\faEnvelope\ \underline{amitabh.sharma@research.iiit.ac.in}}
+    \vspace{+2pt}
+\end{center}
+
+%-----------EDUCATION-----------
+\section{Education}
+  \resumeSubHeadingListStart
+    \resumeSubheading
+      {International Institute of Information Technology, Hyderabad}{Aug 2022 -- Present}
+      {MS by Research (Robotics) \quad CGPA: 9.67/10.00}{\textbf{Supervisor:} Dr. Spandan Roy}
+    \resumeSubheading
+      {Birla Institue of Technology and Science, Pilani}{Aug 2016 -- July 2020}
+      {Bachelor of Engineering (Electronics and Instrumentation)}{}
+  \resumeSubHeadingListEnd
+
+
+%-----------PUBLICATIONS-----------
+\section{Publications}
+\resumeSubHeadingListStart
+
+    \resumeItem{\textbf{A. Sharma}, S. Gupta, S. Singh, R.D. Yadav, H. Song, W. Pan, S. Roy and S. Baldi, \href{https://drive.google.com/file/d/1HkqkOmhag8Z2A9fPm0qs8W_QRIauPzrB/view?usp=drive_link}{\textit{``Impedance and Stability Targeted Adaptation for Aerial Manipulator with Unknown Coupling Dynamics''}}, Proceedings of the 25th International Conference on Control, Automation, and Systems (ICCAS), 2025, in press.}
+    
+    \resumeItem{S. Gupta, \textbf{A. Sharma}, A. Mulgundkar, R.D. Yadav, and S. Roy, \href{https://ieeexplore.ieee.org/abstract/document/10711418}{\textit{``Adaptive Control of Quadrotor under Actuator Loss and Unknown State-dependent Dynamics''}}, at the 2024 IEEE 20th International Conference on Automation Science and Engineering, doi: 10.1109/CASE59546.2024.10711418}
+    
+    \resumeItem{R.D. Yadav, B. Jones, S. Gupta, \textbf{A. Sharma}, J. Sun, J. Zhao and S. Roy, \href{https://ieeexplore.ieee.org/abstract/document/11098573}{\textit{``An integrated approach to aerial grasping: Combining a bistable gripper with adaptive control''}}, in \textit{IEEE/ASME Transactions on Mechatronics}, doi: 10.1109/TMECH.2025.3586888}
+    
+\resumeSubHeadingListEnd
+
+%-----------TECHNICAL REPORTS-----------
+\section{Technical Reports and Under Review}
+\resumeSubHeadingListStart
+  \resumeItem{\textbf{A. Sharma}, S. Gupta, R.D. Yadav, W. Pan, S. Roy, and S. Baldi, \href{https://drive.google.com/file/d/1c9CXoG8qclpZkv1j3IWnG-tqjfvcdm9N/view?usp=drive_link}{\textit{``Achieving Adaptive Impedance Control for Autonomous Aerial Manipulation under Unknown Dynamics''}}, under review at \textit{IEEE/ASME Transactions on Mechatronics}, 2025.}
+  \resumeItem{S. Gupta, \textbf{A. Sharma}, R.D. Yadav, S. Roy, W. Pan, and S. Baldi, \href{https://drive.google.com/file/d/1-EzHzwyE7rtqakK8MWYf0iBJYJWjJdl7/view?usp=drive_link}{\textit{``A Switched Adaptive Control Framework for Aerial Manipulators Under Dynamic Transitions''}}, under review at \textit{IEEE Transactions on Robotics}, 2025.}
+\resumeSubHeadingListEnd
+
+
+%-----------Under Review-----------
+\section{Ongoing Projects}
+\resumeSubHeadingListStart
+
+  \resumeSubheading
+      {Reinforcement Learning Based Control for Robotic Arms in Aerial Manipulation}{}
+      {Robotics Research Center, IIIT Hyderabad}{}
+      \resumeItemListStart
+        \resumeItem{Creating custom simulation environments in Nvidia IsaacLab for training RL agents for aerial manipulators with a 2-DOF robotic arm.}
+        \resumeItem{Learning policies for efficient interaction behavior for the robotic arm via PPO using state and end-effector force feedback}
+        % \resumeItem{Achieving improved manipulation accuracy and reduced energy consumption compared to classical controllers}
+      \resumeItemListEnd
+      
+  \resumeSubheading
+      {Diffusion Models for Robust System Identification}{}
+      {Collaboration with University of Manchester}{}
+      \resumeItemListStart
+        \resumeItem{Researching novel applications of diffusion models for system identification in aerial manipulators}
+        \resumeItem{Developing parameter estimation techniques that are robust to model uncertainties and environmental disturbances}
+        \resumeItem{Implementing PyTorch-based framework for online learning of dynamic parameters during flight operations}
+      \resumeItemListEnd
+  
+\resumeSubHeadingListEnd
+
+%----------Experience----------
+
+\section{Experience}
+    \resumeSubHeadingListStart
+    
+        \resumeSubheading{\small Research Associate, \textnormal{\emph{Non-Linear Control for Aerial Manipulation}}}{\small Aug 2022 -- Present}{Supervisor: Dr. Spandan Roy}{Robotics Research Center, IIIT Hyderabad.}
+            \resumeItemListStart
+                \resumeItem{Working on non-linear control algorithms for aerial manipulators including adaptive control, switched controllers, and impedance controllers. Analyzing the role of impedance control methodologies to add compliance in aerial manipulation.}
+            \resumeItemListEnd
+
+        \vspace{-0.4cm}
+            
+        \resumeSubheading{\small Teaching Assistant, \textnormal{\emph{Robotics -- Dynamics and Control; Mechatronics System Design}}}{\small Monsoon 2023; Spring 2025}{Supervisors: Dr. Nagamanikandan Govindan, Dr. Spandan Roy and Dr. Harikumar Kandath}{IIIT Hyderabad.}
+            \resumeItemListStart
+                \resumeItem{Drafted and graded assignments, quizzes, projects, and exam papers; conducted weekly doubt-clearing sessions.}
+            \resumeItemListEnd
+
+
+        \resumeSubheading{\small Research Associate, \textnormal{\emph{Controller Design for Super-maneuvering Fighter Aircraft}}}{\small Jan 2020 -- June 2020}
+        {Supervisor: Dr. Bijoy Krishna Mukherjee}{EEE, BITS Pilani.}
+            \resumeItemListStart
+                \resumeItem{Worked on designing a H-infinity optimal controller for F-18 High Alpha Research Vehicle (HARV) and tested it for Herbst maneuver in Matlab and Simulink.}
+            \resumeItemListEnd
+
+
+        \resumeSubheading{\small Project Associate, \textnormal{\emph{Design of an Intelligent Fuzzy Controller for Flow control systems}}}{\small Aug 2019 -- Dec 2019}
+        {Supervisor: Dr. Puneet Mishra}{EEE, BITS Pilani.}
+            \resumeItemListStart
+                \resumeItem{Used the Takagi-Sugeno model to design an Intelligent fuzzy controller for rectification of stiction based non-linearities in pneumatic valves and tested it on a flow control plant setup. Compared the designed controller against the PID controller using the IAE and ITAE performance indices.}
+            \resumeItemListEnd
+        
+    \resumeSubHeadingListEnd
+
+
+%-----------Research collabration-----------
+\section{Research Collaborations}
+ \begin{itemize}[leftmargin=0.15in, label={}]
+  \vspace{2pt} 
+    \small{\item{
+     \textbf{Simone Baldi}: Southeast University, Nanjing, China and guest with Delft Center for Systems and Control, TU Delft.\\
+     \textbf{Wei Pan}: University of Manchester, England.\\
+     \textbf{Jianguo Zhao}: Head Adaptive Robotics Lab, Colorado State University, USA.\\
+    %  \textbf{Arun Kumar Singh} University of Tartu, Estonia.
+    }}
+ \end{itemize}
+ \vspace{-16pt}
+
+
+
+%----------TECHNICAL SKILLS----------
+\section{Technical Skills}
+\resumeItemListStart
+  \resumeItem{\textbf{Languages:} Python, C/C++, MATLAB, Bash}
+  \resumeItem{\textbf{AI \& Control Libraries:} PyTorch, TensorFlow, SKRL - Reinforcement Learning library, Stable-Baselines3, SciPy, Control Toolbox}
+  \resumeItem{\textbf{Middleware \& Planning:} ROS 1, ROS 2, MoveIt 2, micro-ROS}
+  \resumeItem{\textbf{Simulation \& Flight:} Gazebo, IsaacSim, IsaacLab, PX4 SITL/HITL, MAVROS}
+  \resumeItem{\textbf{DevOps \& Tooling:} Docker, Docker Compose, Git/GitHub, VS Code Dev Containers}
+  \resumeItem{\textbf{Hardware \& Sensors:} Pixhawk 2.4.8, CUAV X7, NVIDIA Jetson, Dynamixel XM430, OptiTrack MoCap, Robotous RFT60, LiDAR, RGB-D cameras}
+\resumeItemListEnd
+
+% %-----------ACADEMIC PROJECTS-----------
+% \section{Relevant Academic Projects}
+% \resumeSubHeadingListStart
+      
+%     \resumeSubheading
+%       {Diffusion Models for Robust System Identification}{Aug 2023 -- Present}
+%       {Collaboration with University of Manchester}{}
+%       \resumeItemListStart
+%         \resumeItem{Researching novel applications of diffusion models for system identification in aerial manipulators}
+%         \resumeItem{Developing parameter estimation techniques that are robust to model uncertainties and environmental disturbances}
+%         \resumeItem{Implementing PyTorch-based framework for online learning of dynamic parameters during flight operations}
+%       \resumeItemListEnd
+      
+%       \resumeItemListEnd
+      
+% \resumeSubHeadingListEnd
+
+%-----------COURSES------------------------
+
+%-----------RELEVANT COURSES---------------
+%-----------RELEVANT COURSES---------------
+\section{Relevant Courses}
+\resumeItemListStart
+  \resumeItem{\textbf{Graduate:} Robotics: Dynamics and Control; Mobile Robotics; Advances in Robotics and Control; Topics in Applied Optimization; Mechatronic System Design}
+  \resumeItem{\textbf{Undergraduate:} Robotics; Internet of Things (IoT); Control Systems; Control Systems Lab; Industrial Instrumentation and Control; Medical Instrumentation}
+  \resumeItem{\textbf{Audited Courses:} Statistical Methods in Artificial Intelligence; Computer Vision}
+\resumeItemListEnd
+%-----------INVOLVEMENT---------------
+\section{Key Highlights}
+    \vspace{-5pt}
+    \resumeSubHeadingListStart
+      \resumeProjectHeading
+          {\textbf{Scholarships}  \emph{}}{}
+          \resumeItemListStart
+            \resumeItem {IIIT Hyderabad research student fellowship to cover tuition fee during Masters program. (Aug 2022 - Present) }
+          \resumeItemListEnd
+           \vspace{4pt}  
+
+           {\textbf{\small Responsibilities and Volunteering } \emph{}}{}
+           \vspace{-2pt} 
+          \resumeItemListStart
+  \resumeItem{Member of Student Parliament, IIIT-H (2024-2025))}
+  \resumeItem{Student Volunteer, Student Union - BITS Pilani (2016-2017) }
+\resumeItemListEnd
+           \vspace{4pt}  
+          
+          {\textbf{\small Achivements } \emph{}}{}
+           \vspace{-2pt} 
+          \resumeItemListStart
+  \resumeItem{Ranked \textbf{582nd} in Graduate Aptitude Test in Engineering (Feb 2021)}
+  \resumeItem{Scored within the \textbf{99th} percentile nationwide in BITSAT (May 2016)}
+  \resumeItem{Ranked \textbf{125th} in the State Engineering Test (CGPET, Apr 2016)}
+\resumeItemListEnd
+           \vspace{-8pt}  
+          
+        \resumeProjectHeading
+          {\textbf{Presentations}\emph{}}{}
+          \resumeItemListStart
+            \resumeItem{Paper Oral Presentation in CASE 2024.}
+            \resumeItem{Poster Presentation of autonomous aerial manipulation project during IIIT-H R\&D Showcase 2024 and 2025.}
+          \resumeItemListEnd
+          \vspace{2pt}  
+          
+    \resumeSubHeadingListEnd
+
+
+    %----------REFERENCES----------
+\section{Referrals}
+\resumeSubHeadingListStart
+
+  \resumeSubheading
+      {Dr. Spandan Roy}{Assistant Professor, Robotics Research Center, IIIT-H}{spandan.roy@iiit.ac.in}{+91 8777735183}
+
+  \resumeSubheading
+      {Dr. Puneet Mishra}{Assistant Professor, EEE, BITS Pilani}{puneet.mishra@pilani.bits-pilani.ac.in}{+91 8010443127}
+
+  % \resumeSubheading
+  %     {Dr. Wei Pan}{Senior Lecturer (Associate Professor), The University of Manchester}{wei.pan@manchester.ac.uk}{}
+
+\resumeSubHeadingListEnd
+
+\end{document}
+
