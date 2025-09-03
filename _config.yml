@@ -25,9 +25,9 @@ author:
   avatar           : "profile.png"
   name             : "Amitabh Sharma"
   pronouns         : # example: "she/her"  
-  bio              : "MSR student in Robotics at IIIT Hyderabad. Working on aerial manipulation, adaptive and impedance control, and learning-based control."
+  bio              : "MS-Research student in Robotics at IIIT Hyderabad. Working on aerial manipulation, adaptive and impedance control, and learning-based control."
   location         : "Hyderabad, India"
-  employer         : "Robotics Research Center, IIIT Hyderabad"
+  employer         : "Robotics Research Center, IIIT-H"
   uri              : # URL
   email            : "amitabh.sharma@research.iiit.ac.in" 
 
