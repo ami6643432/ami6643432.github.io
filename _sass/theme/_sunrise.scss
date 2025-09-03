@@ -1,0 +1,29 @@
+/* Sunrise skin mapping for light mode (no data-theme attribute) */
+
+/* Palette from Minimal Mistakes sunrise skin */
+$sunrise-background-color: #e8d5b7;
+$sunrise-text-color: #000;
+$sunrise-muted-text-color: #0e2431; // dark-gray
+$sunrise-primary-color: #fc3a52;
+$sunrise-border-color: mix(#000, $sunrise-background-color, 20%);
+$sunrise-code-bg: mix(#fff, $sunrise-background-color, 20%);
+$sunrise-code-text: #1d1f21; // base00
+
+/* Apply to CSS variables used by Academic Pages */
+:root {
+  --global-base-color                 : #{$sunrise-muted-text-color};
+  --global-bg-color                   : #{$sunrise-background-color};
+  --global-border-color               : #{$sunrise-border-color};
+  --global-code-background-color      : #{$sunrise-code-bg};
+  --global-code-text-color            : #{$sunrise-code-text};
+  --global-fig-caption-color          : #{$sunrise-muted-text-color};
+  --global-link-color                 : #{$sunrise-primary-color};
+  --global-link-color-hover           : mix(#fff, #{$sunrise-primary-color}, 25%);
+  --global-link-color-visited         : mix(#000, #{$sunrise-primary-color}, 25%);
+  --global-masthead-link-color        : #{$sunrise-text-color};
+  --global-masthead-link-color-hover  : mix(#000, #{$sunrise-text-color}, 20%);
+  --global-text-color                 : #{$sunrise-text-color};
+  --global-text-color-light           : #{$sunrise-muted-text-color};
+  --global-thead-color                : mix(#fff, #{$sunrise-background-color}, 10%);
+}
+

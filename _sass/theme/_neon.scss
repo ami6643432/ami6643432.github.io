@@ -1,0 +1,26 @@
+/* Neon skin mapping for dark mode (html[data-theme="dark"]) */
+
+/* Palette from Minimal Mistakes neon skin */
+$neon-background-color: #141010;
+$neon-text-color: #fff6fb;
+$neon-primary-color: #f21368;
+$neon-border-color: mix(#fff, $neon-background-color, 20%);
+$neon-code-bg: mix(#000, $neon-background-color, 15%);
+
+html[data-theme="dark"] {
+  --global-base-color                 : #{$neon-background-color};
+  --global-bg-color                   : #{$neon-background-color};
+  --global-border-color               : #{$neon-border-color};
+  --global-code-background-color      : #{$neon-code-bg};
+  --global-code-text-color            : #000000;
+  --global-fig-caption-color          : #{$neon-border-color};
+  --global-link-color                 : #{$neon-primary-color};
+  --global-link-color-hover           : mix(#fff, #{$neon-primary-color}, 25%);
+  --global-link-color-visited         : mix(#000, #{$neon-primary-color}, 25%);
+  --global-masthead-link-color        : #{$neon-text-color};
+  --global-masthead-link-color-hover  : mix(#000, #{$neon-text-color}, 20%);
+  --global-text-color                 : #{$neon-text-color};
+  --global-text-color-light           : #{$neon-border-color};
+  --global-thead-color                : mix(#fff, #{$neon-background-color}, 10%);
+}
+
