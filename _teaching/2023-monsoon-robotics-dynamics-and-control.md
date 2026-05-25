@@ -1,5 +1,5 @@
 ---
-title: "Teaching Assistant — Robotics: Dynamics and Control"
+title: "Teaching Assistant, Robotics: Dynamics and Control"
 collection: teaching
 type: "Graduate course"
 permalink: /teaching/2023-monsoon-robotics-dynamics-and-control

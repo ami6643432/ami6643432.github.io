@@ -1,0 +1,86 @@
+/* Portfolio entry visuals — uses theme CSS vars so it tracks light/dark mode. */
+
+.page__content figure.pf-figure {
+  margin: 1.6rem 0;
+  padding: 0;
+}
+
+.page__content figure.pf-figure img,
+.page__content figure.pf-figure video {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+  box-shadow: 0 6px 22px rgba(0, 0, 0, 0.10), 0 1px 2px rgba(0, 0, 0, 0.06);
+  background: var(--mod-bg-elev, #ffffff);
+  border: 1px solid var(--global-border-color);
+}
+
+.page__content figure.pf-figure figcaption {
+  margin-top: 0.6rem;
+  font-size: 0.88rem;
+  line-height: 1.5;
+  color: var(--global-fig-caption-color);
+  text-align: center;
+  font-style: italic;
+}
+
+/* Side-by-side figure grid */
+.pf-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.2rem;
+  margin: 1.6rem 0;
+}
+
+@media (min-width: 720px) {
+  .pf-grid.pf-grid-2 {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+.pf-grid > figure.pf-figure {
+  margin: 0;
+}
+
+/* Hero image at the top of a portfolio entry */
+.pf-hero {
+  margin: 0 0 1.8rem 0;
+  border-radius: 12px;
+  overflow: hidden;
+  position: relative;
+  box-shadow: 0 8px 28px rgba(0, 0, 0, 0.12), 0 2px 4px rgba(0, 0, 0, 0.06);
+  border: 1px solid var(--global-border-color);
+}
+
+.pf-hero img,
+.pf-hero video {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.pf-hero-caption {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  padding: 0.75rem 1.1rem;
+  background: linear-gradient(to top, rgba(0,0,0,0.62), rgba(0,0,0,0));
+  color: #fff;
+  font-size: 0.86rem;
+  font-style: italic;
+  letter-spacing: 0.005em;
+}
+
+/* TL;DR card */
+.pf-tldr {
+  margin: 1.4rem 0 2rem 0;
+  padding: 1rem 1.2rem;
+  border-left: 3px solid var(--global-link-color);
+  background: var(--mod-bg-elev, rgba(58, 91, 219, 0.05));
+  border-radius: 0 10px 10px 0;
+  font-size: 0.98rem;
+  line-height: 1.55;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+}

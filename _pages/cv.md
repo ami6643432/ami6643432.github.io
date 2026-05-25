@@ -15,25 +15,25 @@ Download
 
 Education
 ======
-* MS by Research (Robotics), International Institute of Information Technology, Hyderabad (IIIT Hyderabad), Aug 2022 — Present  
+* MS by Research (Robotics), International Institute of Information Technology, Hyderabad (IIIT Hyderabad), Aug 2022 – Present  
   Supervisor: Dr. Spandan Roy; CGPA: 9.67/10.00
-* B.E. (Electronics and Instrumentation), Birla Institute of Technology and Science, Pilani (BITS Pilani), Aug 2016 — July 2020
+* B.E. (Electronics and Instrumentation), Birla Institute of Technology and Science, Pilani (BITS Pilani), Aug 2016 – July 2020
 
 Experience
 ======
-* Research Associate — Non-Linear Control for Aerial Manipulation, Aug 2022 — Present  
+* Research Associate, Non-Linear Control for Aerial Manipulation, Aug 2022 – Present  
   Robotics Research Center, IIIT Hyderabad; Supervisor: Dr. Spandan Roy  
   - Working on adaptive, switched, and impedance control for aerial manipulators; analyzing compliance via impedance control.
 
-* Teaching Assistant — Robotics: Dynamics and Control; Mechatronics System Design, Monsoon 2023; Spring 2025  
+* Teaching Assistant, Robotics: Dynamics and Control; Mechatronics System Design, Monsoon 2023; Spring 2025  
   IIIT Hyderabad; Supervisors: Dr. Nagamanikandan Govindan, Dr. Spandan Roy, Dr. Harikumar Kandath  
   - Drafted and graded assignments, quizzes, projects, and exam papers; conducted weekly doubt-clearing sessions.
 
-* Research Associate — Controller Design for Super-maneuvering Fighter Aircraft, Jan 2020 — June 2020  
+* Research Associate, Controller Design for Super-maneuvering Fighter Aircraft, Jan 2020 – June 2020  
   EEE, BITS Pilani; Supervisor: Dr. Bijoy Krishna Mukherjee  
   - Designed H-infinity controller for F-18 HARV; tested Herbst maneuver in MATLAB/Simulink.
 
-* Project Associate — Intelligent Fuzzy Controller for Flow Control Systems, Aug 2019 — Dec 2019  
+* Project Associate, Intelligent Fuzzy Controller for Flow Control Systems, Aug 2019 – Dec 2019  
   EEE, BITS Pilani; Supervisor: Dr. Puneet Mishra  
   - Designed Takagi–Sugeno fuzzy controller to mitigate stiction in pneumatic valves; compared with PID using IAE/ITAE indices.
 
@@ -60,6 +60,6 @@ Teaching
   
 Research Collaborations
 ======
-* Simone Baldi — Southeast University, Nanjing; guest with DCSC, TU Delft
-* Wei Pan — University of Manchester
-* Jianguo Zhao — Adaptive Robotics Lab, Colorado State University
+* Simone Baldi, Southeast University, Nanjing; guest with DCSC, TU Delft
+* Wei Pan, University of Manchester
+* Jianguo Zhao, Adaptive Robotics Lab, Colorado State University

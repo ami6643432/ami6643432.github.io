@@ -1,29 +1,31 @@
-/* Sunrise skin mapping for light mode (no data-theme attribute) */
+/* Modern light palette (replaces sunrise) — warm paper, charcoal text, indigo accent. */
 
-/* Palette from Minimal Mistakes sunrise skin */
-$sunrise-background-color: #e8d5b7;
-$sunrise-text-color: #000;
-$sunrise-muted-text-color: #0e2431; // dark-gray
-$sunrise-primary-color: #fc3a52;
-$sunrise-border-color: mix(#000, $sunrise-background-color, 20%);
-$sunrise-code-bg: mix(#fff, $sunrise-background-color, 20%);
-$sunrise-code-text: #1d1f21; // base00
+$mod-bg: #faf9f6;          // warm paper
+$mod-bg-elev: #ffffff;     // cards / elevated surfaces
+$mod-text: #1a1a1a;        // charcoal
+$mod-text-muted: #565a63;  // captions, meta
+$mod-border: #e5e3dd;
+$mod-primary: #3a5bdb;     // indigo accent
+$mod-primary-hover: #2944b0;
+$mod-primary-visited: #4c40a8;
+$mod-code-bg: #f1efe9;
+$mod-code-text: #2b2b2b;
+$mod-thead: #f3f1ec;
 
-/* Apply to CSS variables used by Academic Pages */
 :root {
-  --global-base-color                 : #{$sunrise-muted-text-color};
-  --global-bg-color                   : #{$sunrise-background-color};
-  --global-border-color               : #{$sunrise-border-color};
-  --global-code-background-color      : #{$sunrise-code-bg};
-  --global-code-text-color            : #{$sunrise-code-text};
-  --global-fig-caption-color          : #{$sunrise-muted-text-color};
-  --global-link-color                 : #{$sunrise-primary-color};
-  --global-link-color-hover           : mix(#fff, #{$sunrise-primary-color}, 25%);
-  --global-link-color-visited         : mix(#000, #{$sunrise-primary-color}, 25%);
-  --global-masthead-link-color        : #{$sunrise-text-color};
-  --global-masthead-link-color-hover  : mix(#000, #{$sunrise-text-color}, 20%);
-  --global-text-color                 : #{$sunrise-text-color};
-  --global-text-color-light           : #{$sunrise-muted-text-color};
-  --global-thead-color                : mix(#fff, #{$sunrise-background-color}, 10%);
+  --global-base-color                 : #{$mod-text-muted};
+  --global-bg-color                   : #{$mod-bg};
+  --global-border-color               : #{$mod-border};
+  --global-code-background-color      : #{$mod-code-bg};
+  --global-code-text-color            : #{$mod-code-text};
+  --global-fig-caption-color          : #{$mod-text-muted};
+  --global-link-color                 : #{$mod-primary};
+  --global-link-color-hover           : #{$mod-primary-hover};
+  --global-link-color-visited         : #{$mod-primary-visited};
+  --global-masthead-link-color        : #{$mod-text};
+  --global-masthead-link-color-hover  : #{$mod-primary};
+  --global-text-color                 : #{$mod-text};
+  --global-text-color-light           : #{$mod-text-muted};
+  --global-thead-color                : #{$mod-thead};
+  --mod-bg-elev                       : #{$mod-bg-elev};
 }
-

@@ -7,5 +7,20 @@ author_profile: true
 
 {% include base_path %}
 
-<p><em>Coming soon.</em></p>
-
+<div class="pf-list">
+  {% for post in site.portfolio reversed %}
+    <a class="pf-card" href="{{ base_path }}{{ post.url }}">
+      {% if post.header.teaser %}
+        <div class="pf-card__media">
+          <img src="{{ post.header.teaser | prepend: '/images/' | prepend: base_path }}" alt="">
+        </div>
+      {% endif %}
+      <div class="pf-card__body">
+        <h3 class="pf-card__title">{{ post.title }}</h3>
+        {% if post.excerpt %}
+          <p class="pf-card__excerpt">{{ post.excerpt | strip_html | strip_newlines | truncate: 220 }}</p>
+        {% endif %}
+      </div>
+    </a>
+  {% endfor %}
+</div>

@@ -1,5 +1,5 @@
 ---
-title: "Teaching Assistant — Mechatronics System Design"
+title: "Teaching Assistant, Mechatronics System Design"
 collection: teaching
 type: "Graduate course"
 permalink: /teaching/2025-spring-mechatronics-system-design

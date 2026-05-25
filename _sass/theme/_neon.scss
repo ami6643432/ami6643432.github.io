@@ -1,26 +1,31 @@
-/* Neon skin mapping for dark mode (html[data-theme="dark"]) */
+/* Modern dark palette (replaces neon) — deep slate, off-white, sky accent. */
 
-/* Palette from Minimal Mistakes neon skin */
-$neon-background-color: #141010;
-$neon-text-color: #fff6fb;
-$neon-primary-color: #f21368;
-$neon-border-color: mix(#fff, $neon-background-color, 20%);
-$neon-code-bg: mix(#000, $neon-background-color, 15%);
+$mod-d-bg: #0f1115;
+$mod-d-bg-elev: #181b21;
+$mod-d-text: #e6e7eb;
+$mod-d-text-muted: #9aa1ad;
+$mod-d-border: #262a32;
+$mod-d-primary: #6bb4ff;
+$mod-d-primary-hover: #9ccaff;
+$mod-d-primary-visited: #4f8fd9;
+$mod-d-code-bg: #1d2128;
+$mod-d-code-text: #d8dde6;
+$mod-d-thead: #1c2027;
 
 html[data-theme="dark"] {
-  --global-base-color                 : #{$neon-background-color};
-  --global-bg-color                   : #{$neon-background-color};
-  --global-border-color               : #{$neon-border-color};
-  --global-code-background-color      : #{$neon-code-bg};
-  --global-code-text-color            : #000000;
-  --global-fig-caption-color          : #{$neon-border-color};
-  --global-link-color                 : #{$neon-primary-color};
-  --global-link-color-hover           : mix(#fff, #{$neon-primary-color}, 25%);
-  --global-link-color-visited         : mix(#000, #{$neon-primary-color}, 25%);
-  --global-masthead-link-color        : #{$neon-text-color};
-  --global-masthead-link-color-hover  : mix(#000, #{$neon-text-color}, 20%);
-  --global-text-color                 : #{$neon-text-color};
-  --global-text-color-light           : #{$neon-border-color};
-  --global-thead-color                : mix(#fff, #{$neon-background-color}, 10%);
+  --global-base-color                 : #{$mod-d-text-muted};
+  --global-bg-color                   : #{$mod-d-bg};
+  --global-border-color               : #{$mod-d-border};
+  --global-code-background-color      : #{$mod-d-code-bg};
+  --global-code-text-color            : #{$mod-d-code-text};
+  --global-fig-caption-color          : #{$mod-d-text-muted};
+  --global-link-color                 : #{$mod-d-primary};
+  --global-link-color-hover           : #{$mod-d-primary-hover};
+  --global-link-color-visited         : #{$mod-d-primary-visited};
+  --global-masthead-link-color        : #{$mod-d-text};
+  --global-masthead-link-color-hover  : #{$mod-d-primary};
+  --global-text-color                 : #{$mod-d-text};
+  --global-text-color-light           : #{$mod-d-text-muted};
+  --global-thead-color                : #{$mod-d-thead};
+  --mod-bg-elev                       : #{$mod-d-bg-elev};
 }
-

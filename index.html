@@ -1,37 +1,82 @@
 ---
 layout: single
-<!-- title: "Home" -->
 permalink: /
-excerpt: "MS-Research student in Robotics at IIIT Hyderabad. Adaptive/impedance control and learning for aerial manipulation."
+excerpt: "MS-Research student in Robotics at IIIT Hyderabad. Adaptive and impedance control for aerial manipulation."
+author_profile: false
 ---
 
-<!-- <p style="text-align:center; margin: 0 0 1.25rem;">
-  <img src="{{ '/images/profile.png' | relative_url }}" alt="Amitabh Sharma" width="160" height="160" style="border-radius:50%; box-shadow: 0 0 0 2px rgba(0,0,0,0.08);" />
-</p> -->
+<section class="home-hero">
+  <div class="home-hero__media">
+    <img src="/images/profile.png" alt="Amitabh Sharma" />
+  </div>
+  <div class="home-hero__text">
+    <p class="home-hero__eyebrow">MS by Research, Robotics Research Center, IIIT Hyderabad</p>
+    <h1 class="home-hero__name">Amitabh Sharma</h1>
+    <p class="home-hero__pitch">
+      Adaptive and impedance control for aerial manipulators that have to interact with the world,
+      with a particular interest in safety filters, payload-aware controllers, and proofs that
+      can be machine-checked.
+    </p>
+    <div class="home-hero__links">
+      <a href="/portfolio/" class="home-pill home-pill--primary">See the work</a>
+      <a href="/year-archive/" class="home-pill">Blog</a>
+      <a href="/publications/" class="home-pill">Publications</a>
+      <a href="/files/CV_sept_25.pdf" class="home-pill">CV (PDF)</a>
+    </div>
+  </div>
+</section>
 
-<h2>About</h2>
-<p>
-I am Amitabh Sharma, an MS by Research student at the Robotics Research Center, IIIT Hyderabad. My work focuses on adaptive and impedance control for robotic systems that interact dynamically with the environment, with an emphasis on aerial manipulation. I combine Lyapunov-based stability analysis with full-stack experiments across ROS/ROS 2, PX4, Gazebo, and Isaac Sim to move controllers from simulation to hardware with formal guarantees on robustness and performance.
-</p>
+<section class="home-section">
+  <h2 class="home-section__title">Featured work</h2>
+  <div class="home-featured">
+    <a class="home-feature" href="/portfolio/2026-payload-feasibility-certificate/">
+      <div class="home-feature__media">
+        <img src="/images/portfolio/payload-cert-delta-envelope.png" alt="Payload feasibility envelope">
+      </div>
+      <div class="home-feature__body">
+        <h3>Payload Feasibility Certificate</h3>
+        <p>A pre-flight test that asks whether an aerial manipulator can safely lift a given payload, with a closed-form bound and a Lean 4 proof script.</p>
+      </div>
+    </a>
+    <a class="home-feature" href="/portfolio/2026-adaptive-impedance-aerial-catching/">
+      <div class="home-feature__media">
+        <img src="/images/portfolio/catching-compliant-catch.gif" alt="2R arm catching a thrown ball in MuJoCo">
+      </div>
+      <div class="home-feature__body">
+        <h3>Adaptive Impedance for Aerial Catching</h3>
+        <p>A 2R arm on a hovering quadrotor catches a thrown ball, estimating the payload mass on impact while keeping the wrench delivered back to the base under control.</p>
+      </div>
+    </a>
+  </div>
+</section>
 
-<h2>Research Focus</h2>
-<ul>
-  <li>Adaptive impedance control for compliant aerial manipulation under unknown vehicle-arm coupling</li>
-  <li>Integrated grasp-and-flight with bistable grippers and adaptive control</li>
-  <li>Fault-tolerant control for quadrotors under actuator loss and state-dependent disturbances</li>
-</ul>
+<section class="home-section">
+  <h2 class="home-section__title">Research interests</h2>
+  <div class="home-cards">
+    <div class="home-card">
+      <div class="home-card__icon" aria-hidden="true">⟁</div>
+      <h3>Adaptive impedance control</h3>
+      <p>Compliant aerial manipulation under unknown vehicle–arm coupling. Stability via Lyapunov; experiments on real hardware.</p>
+    </div>
+    <div class="home-card">
+      <div class="home-card__icon" aria-hidden="true">◇</div>
+      <h3>Safety filters with certificates</h3>
+      <p>Energy-based barrier functions paired with closed-form pre-flight bounds, plus Lean 4 verification of the load-bearing lemmas.</p>
+    </div>
+    <div class="home-card">
+      <div class="home-card__icon" aria-hidden="true">◯</div>
+      <h3>Fault-tolerant flight</h3>
+      <p>Quadrotor control under partial actuator loss and state-dependent disturbances, with adaptive laws that survive the failure mode.</p>
+    </div>
+  </div>
+</section>
 
-<h2>Selected Contributions</h2>
-<ul>
-  <li>Adaptive Impedance Control for Aerial Manipulation — uniformly ultimately bounded tracking and impedance errors under unknown coupling.</li>
-  <li>Integrated Aerial Grasping — bistable gripper with adaptive control for robust grasp-and-flight.</li>
-  <li>Fault-Tolerant Quadrotor Control — handles actuator loss and state-dependent disturbances.</li>
-</ul>
-
-<h2>Quick Links</h2>
-<ul>
-  <li><a href="/publications/">Publications</a></li>
-  <li><a href="/teaching/">Teaching</a></li>
-  <li><a href="/cv/">CV</a> &mdash; <a href="/files/CV_sept_25.pdf">Download PDF</a></li>
-  <!-- <li><a href="/about/">About</a></li> -->
-</ul>
+<section class="home-section home-section--cta">
+  <div class="home-cta">
+    <div>
+      <h2 class="home-cta__title">Want the long version?</h2>
+      <p class="home-cta__sub">Posts and notes on what I find interesting about controls, formal proofs, and where this work fits.</p>
+    </div>
+    <a class="home-pill home-pill--primary" href="/year-archive/">Read the blog →</a>
+  </div>
+</section>

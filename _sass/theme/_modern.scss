@@ -1,0 +1,687 @@
+/* ==========================================================================
+   MODERN POLISH LAYER
+   Sits on top of palette variables. Applies in both light and dark mode.
+   ========================================================================== */
+
+$mod-font-stack: "Inter", -apple-system, "SF Pro Text", "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+$mod-font-mono: "JetBrains Mono", ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: $mod-font-stack;
+  font-feature-settings: "cv11", "ss01", "ss03";
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  line-height: 1.65;
+}
+
+/* Larger comfortable reading column on big screens */
+.page__inner-wrap, .archive {
+  letter-spacing: 0.005em;
+}
+
+/* Headings: tighter tracking, weightier */
+h1, h2, h3, h4, h5, h6,
+.page__title,
+.archive__item-title {
+  font-family: $mod-font-stack;
+  font-weight: 650;
+  letter-spacing: -0.012em;
+  line-height: 1.25;
+}
+
+.page__title {
+  font-weight: 700;
+  font-size: 2.1em;
+  margin-top: 0.5em;
+  margin-bottom: 0.6em;
+}
+
+h2 { font-size: 1.55em; margin-top: 2.2rem; }
+h3 { font-size: 1.25em; }
+
+/* Code */
+code, pre, tt, kbd, samp {
+  font-family: $mod-font-mono;
+  font-size: 0.92em;
+}
+
+pre {
+  border-radius: 8px;
+  padding: 0.9rem 1.1rem;
+  line-height: 1.55;
+}
+
+/* Links inside body content: modern thin underline with skip-ink */
+.page__content a {
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 0.18em;
+  text-decoration-color: var(--global-link-color);
+  text-decoration-skip-ink: auto;
+  transition: text-decoration-thickness 0.18s ease, color 0.18s ease;
+}
+
+.page__content a:hover {
+  text-decoration-thickness: 2px;
+  color: var(--global-link-color-hover);
+}
+
+/* Archive list titles: no underline, color shift only.
+   Higher specificity than theme's .archive a override. */
+.archive .archive__item-title a,
+.archive__item-title a {
+  text-decoration: none !important;
+  color: var(--global-text-color);
+  transition: color 0.18s ease;
+}
+
+.archive .archive__item-title a:hover,
+.archive__item-title a:hover {
+  color: var(--global-link-color);
+  text-decoration: none !important;
+}
+
+/* Kill theme's hover-underline on the H2 itself (the "second" line in the doubled effect) */
+.archive__item:hover .archive__item-title,
+.archive .archive__item:hover .archive__item-title {
+  text-decoration: none !important;
+}
+
+/* Masthead: thinner, cleaner border, sticky-feeling */
+.masthead {
+  border-bottom: 1px solid var(--global-border-color);
+  background-color: var(--global-bg-color);
+}
+
+.masthead__inner-wrap {
+  padding: 0.9em 1em;
+}
+
+.greedy-nav {
+  background-color: transparent;
+}
+
+.greedy-nav .visible-links a,
+.greedy-nav .hidden-links a {
+  font-weight: 500;
+  font-size: 0.95em;
+  transition: color 0.18s ease;
+}
+
+.greedy-nav a::before {
+  display: none; /* drop the underline-on-hover bar; we use color shift instead */
+}
+
+.greedy-nav a:hover {
+  color: var(--global-link-color);
+}
+
+/* Author sidebar: soft card */
+.sidebar .author__avatar img {
+  border-radius: 50%;
+  box-shadow: 0 4px 14px rgba(0,0,0,0.10), 0 1px 2px rgba(0,0,0,0.06);
+}
+
+.sidebar .author__name {
+  font-weight: 650;
+  letter-spacing: -0.01em;
+}
+
+.sidebar .author__bio {
+  color: var(--global-text-color-light);
+  line-height: 1.55;
+}
+
+.author__urls li a {
+  transition: color 0.18s ease, transform 0.18s ease;
+}
+
+.author__urls li a:hover {
+  color: var(--global-link-color);
+  transform: translateX(2px);
+}
+
+/* Buttons */
+.btn {
+  border-radius: 8px;
+  font-weight: 600;
+  letter-spacing: 0.01em;
+  transition: transform 0.15s ease, box-shadow 0.15s ease, background-color 0.15s ease;
+}
+
+.btn:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.12);
+}
+
+/* Archive list items: card feel */
+.archive__item {
+  padding: 1rem 0;
+  border-bottom: 1px solid var(--global-border-color);
+}
+
+.archive__item:last-child {
+  border-bottom: none;
+}
+
+.archive__item-title {
+  font-size: 1.2em;
+  margin-bottom: 0.35em;
+}
+
+.archive__item-excerpt {
+  color: var(--global-text-color-light);
+  font-size: 0.95em;
+  line-height: 1.55;
+}
+
+/* ==========================================================================
+   HOME PAGE
+   ========================================================================== */
+
+.home-hero {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.6rem;
+  align-items: center;
+  margin: 0.4rem 0 2.6rem;
+  padding: 1.6rem 0 2rem;
+  border-bottom: 1px solid var(--global-border-color);
+}
+
+@media (min-width: 720px) {
+  .home-hero {
+    grid-template-columns: 200px 1fr;
+    gap: 2.4rem;
+  }
+}
+
+.home-hero__media img {
+  width: 180px;
+  height: 180px;
+  border-radius: 50%;
+  object-fit: cover;
+  display: block;
+  margin: 0 auto;
+  box-shadow: 0 8px 26px rgba(0,0,0,0.12), 0 2px 4px rgba(0,0,0,0.06);
+  border: 3px solid var(--mod-bg-elev, #fff);
+}
+
+.home-hero__eyebrow {
+  margin: 0 0 0.4rem;
+  font-size: 0.85rem;
+  font-weight: 500;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: var(--global-text-color-light);
+}
+
+.home-hero__name {
+  margin: 0 0 0.6rem;
+  font-size: 2.4em;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  line-height: 1.1;
+}
+
+.home-hero__pitch {
+  margin: 0 0 1.2rem;
+  font-size: 1.06em;
+  line-height: 1.55;
+  color: var(--global-text-color);
+  max-width: 56ch;
+}
+
+.home-hero__links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.55rem;
+}
+
+.home-pill {
+  display: inline-block;
+  padding: 0.5rem 1rem;
+  border-radius: 999px;
+  border: 1px solid var(--global-border-color);
+  background: var(--mod-bg-elev, #fff);
+  color: var(--global-text-color) !important;
+  font-size: 0.92rem;
+  font-weight: 500;
+  text-decoration: none !important;
+  background-image: none !important; /* defeat global underline */
+  transition: background-color 0.18s ease, border-color 0.18s ease, color 0.18s ease, transform 0.18s ease;
+}
+
+.home-pill:hover {
+  border-color: var(--global-link-color);
+  color: var(--global-link-color) !important;
+  transform: translateY(-1px);
+}
+
+.home-pill--primary {
+  background: var(--global-link-color);
+  border-color: var(--global-link-color);
+  color: var(--global-bg-color) !important;
+}
+
+.home-pill--primary:hover {
+  background: var(--global-link-color-hover);
+  border-color: var(--global-link-color-hover);
+  color: var(--global-bg-color) !important;
+}
+
+/* Section heading */
+.home-section {
+  margin: 2.4rem 0;
+}
+
+.home-section__title {
+  margin: 0 0 1.2rem;
+  font-size: 1.35em;
+  font-weight: 650;
+  letter-spacing: -0.01em;
+  position: relative;
+  padding-left: 0.85rem;
+}
+
+.home-section__title::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0.25em;
+  bottom: 0.25em;
+  width: 3px;
+  background: var(--global-link-color);
+  border-radius: 2px;
+}
+
+/* Featured work — two large cards */
+.home-featured {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.4rem;
+}
+
+@media (min-width: 720px) {
+  .home-featured {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+.home-feature {
+  display: flex;
+  flex-direction: column;
+  background: var(--mod-bg-elev, #fff);
+  border: 1px solid var(--global-border-color);
+  border-radius: 14px;
+  overflow: hidden;
+  text-decoration: none !important;
+  color: var(--global-text-color) !important;
+  background-image: none !important;
+  transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
+}
+
+.home-feature:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 14px 30px rgba(0,0,0,0.10), 0 2px 6px rgba(0,0,0,0.05);
+  border-color: var(--global-link-color);
+}
+
+.home-feature__media {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  overflow: hidden;
+  background: var(--global-code-background-color);
+}
+
+.home-feature__media img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.4s ease;
+}
+
+/* Tighter framing for the envelope plot (4:3 source, looks heavy under crop) */
+.home-feature__media img[src*="payload-cert-delta-envelope"],
+.pf-card__media img[src*="payload-cert-delta-envelope"] {
+  object-fit: contain;
+  padding: 0.6rem 1.2rem;
+  background: var(--mod-bg-elev, #fff);
+}
+
+.home-feature:hover .home-feature__media img {
+  transform: scale(1.03);
+}
+
+.home-feature__body {
+  padding: 1rem 1.15rem 1.2rem;
+}
+
+.home-feature__body h3 {
+  margin: 0 0 0.45em;
+  font-size: 1.12em;
+  font-weight: 650;
+  letter-spacing: -0.01em;
+}
+
+.home-feature:hover .home-feature__body h3 {
+  color: var(--global-link-color);
+}
+
+.home-feature__body p {
+  margin: 0;
+  font-size: 0.94em;
+  line-height: 1.5;
+  color: var(--global-text-color-light);
+}
+
+/* Research interest cards */
+.home-cards {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.2rem;
+}
+
+@media (min-width: 720px) {
+  .home-cards {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.home-card {
+  padding: 1.25rem 1.25rem 1.4rem;
+  background: var(--mod-bg-elev, #fff);
+  border: 1px solid var(--global-border-color);
+  border-radius: 12px;
+  transition: border-color 0.2s ease, transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.home-card:hover {
+  border-color: var(--global-link-color);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.06);
+}
+
+.home-card__icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 38px;
+  height: 38px;
+  border-radius: 10px;
+  margin-bottom: 0.7rem;
+  background: linear-gradient(135deg, var(--global-link-color), var(--global-link-color-visited, var(--global-link-color)));
+  color: var(--global-bg-color);
+  font-size: 1.25rem;
+  font-weight: 700;
+  line-height: 1;
+}
+
+.home-card h3 {
+  margin: 0 0 0.4em;
+  font-size: 1.05em;
+  font-weight: 650;
+  letter-spacing: -0.005em;
+}
+
+.home-card p {
+  margin: 0;
+  font-size: 0.93em;
+  line-height: 1.55;
+  color: var(--global-text-color-light);
+}
+
+/* CTA band */
+.home-section--cta {
+  margin-top: 3rem;
+}
+
+.home-cta {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  align-items: flex-start;
+  padding: 1.4rem 1.6rem;
+  border-radius: 14px;
+  background: linear-gradient(135deg, rgba(58,91,219,0.08), rgba(58,91,219,0.02));
+  border: 1px solid var(--global-border-color);
+}
+
+@media (min-width: 720px) {
+  .home-cta {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    gap: 2rem;
+  }
+}
+
+.home-cta__title {
+  margin: 0 0 0.35em;
+  font-size: 1.2em;
+  font-weight: 650;
+}
+
+.home-cta__sub {
+  margin: 0;
+  color: var(--global-text-color-light);
+  font-size: 0.96em;
+  line-height: 1.5;
+  max-width: 50ch;
+}
+
+/* Portfolio card list (custom — bypasses theme's Susy float gallery) */
+.pf-list {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.4rem;
+  margin: 1.4rem 0 2rem;
+}
+
+@media (min-width: 720px) {
+  .pf-list {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+.pf-card {
+  display: flex;
+  flex-direction: column;
+  background: var(--mod-bg-elev, #ffffff);
+  border: 1px solid var(--global-border-color);
+  border-radius: 12px;
+  overflow: hidden;
+  text-decoration: none !important;
+  color: var(--global-text-color) !important;
+  background-image: none !important; /* defeat global animated underline */
+  transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
+}
+
+.pf-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 12px 28px rgba(0,0,0,0.10), 0 2px 6px rgba(0,0,0,0.05);
+  border-color: var(--global-link-color);
+}
+
+.pf-card__media {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  background: var(--global-code-background-color);
+  overflow: hidden;
+}
+
+.pf-card__media img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.pf-card__body {
+  padding: 1rem 1.1rem 1.15rem;
+}
+
+.pf-card__title {
+  margin: 0 0 0.45em;
+  font-size: 1.1em;
+  font-weight: 650;
+  letter-spacing: -0.01em;
+  line-height: 1.3;
+  color: var(--global-text-color);
+}
+
+.pf-card:hover .pf-card__title {
+  color: var(--global-link-color);
+}
+
+.pf-card__excerpt {
+  margin: 0;
+  font-size: 0.92em;
+  line-height: 1.5;
+  color: var(--global-text-color-light);
+}
+
+/* Page footer: hairline */
+.page__footer {
+  border-top: 1px solid var(--global-border-color);
+  background-color: var(--global-bg-color);
+  color: var(--global-text-color-light);
+}
+
+.page__footer-copyright {
+  font-size: 0.85em;
+}
+
+/* Selection color */
+::selection {
+  background: var(--global-link-color);
+  color: var(--global-bg-color);
+}
+
+/* Hide noisy permalink chain icon next to titles in archive listings */
+.archive__item-title .fa-link,
+.archive__item-title .sr-only {
+  display: none;
+}
+
+/* Avatar object-position: profile photo's head is high in frame */
+.sidebar .author__avatar img {
+  object-fit: cover;
+  object-position: 50% 25%;
+}
+
+/* Follow button: use accent */
+.btn--inverse {
+  border-color: var(--global-link-color);
+  color: var(--global-link-color);
+  background: transparent;
+}
+
+.btn--inverse:hover {
+  background: var(--global-link-color);
+  color: var(--global-bg-color);
+}
+
+/* Blog list: visual year headers */
+.archive__subtitle {
+  margin-top: 2.4rem;
+  margin-bottom: 1rem;
+  padding-bottom: 0.4rem;
+  font-size: 1.4em;
+  font-weight: 650;
+  letter-spacing: -0.01em;
+  color: var(--global-text-color);
+  border-bottom: 2px solid var(--global-link-color);
+  display: inline-block;
+}
+
+/* Better post meta line */
+.page__meta {
+  font-size: 0.82rem;
+  color: var(--global-text-color-light);
+  letter-spacing: 0.01em;
+}
+
+.page__meta .fa-clock,
+.page__meta .fa-calendar-alt {
+  margin-right: 0.3em;
+  opacity: 0.7;
+}
+
+/* Publications: venue chip via .archive__item-excerpt convention.
+   The theme renders excerpt below title; we lift the venue line into a chip
+   by styling em / italic-leading lines if present. */
+.publication .archive__item .archive__item-excerpt em,
+.archive__item-excerpt em {
+  font-style: normal;
+}
+
+/* Card-like spacing for archive items on listing pages */
+.archive .archive__item {
+  padding: 1.1rem 0 1.3rem;
+}
+
+/* Meta chips for publications & teaching listings */
+.archive-meta-chip {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.45rem;
+  margin: 0.35rem 0 0.6rem;
+}
+
+.meta-chip {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.2rem 0.65rem;
+  border-radius: 999px;
+  font-size: 0.78rem;
+  font-weight: 500;
+  line-height: 1.4;
+  background: var(--global-code-background-color);
+  color: var(--global-text-color-light);
+  border: 1px solid var(--global-border-color);
+  letter-spacing: 0.01em;
+}
+
+.meta-chip--venue {
+  background: rgba(58, 91, 219, 0.10);
+  color: var(--global-link-color);
+  border-color: rgba(58, 91, 219, 0.25);
+  font-weight: 600;
+  font-style: normal;
+}
+
+html[data-theme="dark"] .meta-chip--venue {
+  background: rgba(107, 180, 255, 0.12);
+  color: var(--global-link-color);
+  border-color: rgba(107, 180, 255, 0.28);
+}
+
+.meta-chip--year {
+  font-variant-numeric: tabular-nums;
+}
+
+/* Title spacing on archive items */
+.archive__item-title {
+  margin-bottom: 0.2rem;
+}
+
+/* Archive item hover (post links) */
+.archive__item:hover .archive__item-title a {
+  color: var(--global-link-color);
+}
+
+/* Tables */
+table {
+  border-radius: 8px;
+  overflow: hidden;
+  border: 1px solid var(--global-border-color);
+}
+
+th {
+  background: var(--global-thead-color);
+}
